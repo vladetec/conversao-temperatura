@@ -22,6 +22,7 @@ docker image ls
 ##- Rodar e Listar container Docker
 ```
 docker container run -d -p 8080:8080 conversao-temperatura
+docker container run -d -p 8080:8080 <Id>
 docker container ls
 ```
 
@@ -30,7 +31,16 @@ docker container ls
 docker container rm -f <ID>
 docker image rmi -f <ID>
 ```
-
+##_ Outros comandos usados
+```
+docker ps -a
+docker login
+docker push vladedocker/conversao-temperatura:v1
+docker tag vladedocker/conversao-temperatura:v1 vladedocker/conversao-temperatura:latest
+docker push vladedocker/conversao-temperatura:latest
+docker image prune
+docker container prune
+```
 ## Links
 
 [Conversao-Temperatura](http://localhost:8080/)
