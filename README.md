@@ -3,15 +3,24 @@
 
 ## Como rodar o projeto?
 
-* Pré condiçaõ Git e Docker instalados
+* Pré condiçaõ Git, Docker, K3d, Kubectl instalados
 * Clone esse repositório.
 * Rode o ambiente com os comandos.
 
 ##-NO TERMINAL
 ```
 git clone https://github.com/vladetec/conversao-temperatura.git
-cd src
+cd conversao-temperatura
+cd k8s
+k3d cluster create mycluster --servers 1 --agents 3 -p "8080:30000@loadbalancer"
+kubectl apply -f deployment.yaml
+
 ```
+## Links
+
+[Conversao-Temperatura](http://localhost:8080/)
+[Comandos-K3d](https://k3d.io/v5.2.2/usage/commands/)
+[Comandos-Kubectl](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)
 ## Comandos Uteis no Docker
 
 ##- Criar e Listar imagem Docker
@@ -41,8 +50,6 @@ docker push vladedocker/conversao-temperatura:latest
 docker image prune
 docker container prune
 ```
-## Links
 
-[Conversao-Temperatura](http://localhost:8080/)
 
 
