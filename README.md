@@ -19,7 +19,11 @@ kubectl apply -f deployment.yaml
 ## Links
 
 [Conversao-Temperatura](http://localhost:8080/)
+
+[Github-Actions](https://docs.github.com/pt/actions/learn-github-actions/understanding-github-actions)
+
 [Comandos-K3d](https://k3d.io/v5.2.2/usage/commands/)
+
 [Comandos-Kubectl](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)
 ## Comandos Uteis no Docker
 
